@@ -1,0 +1,5 @@
+opencv-python
+requests
+gpiozero
+RPLCD
+RPi.GPIO
