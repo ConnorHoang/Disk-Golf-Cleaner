@@ -24,20 +24,20 @@ STALL_TIMEOUT = 5.0
 STALL_SENSITIVITY = 20 
 
 # pinout mapping
-PIN_START_BTN   = 16   
-PIN_STOP_BTN    = 3  
-PIN_ENCODER     = 1   
-PIN_BRUSH_SERVO = 13  
-PIN_CENTRAL_MTR = 17  
-PIN_CHUCK_MTR   = 27  
+PIN_START_BTN   = 2  
+PIN_STOP_BTN    = 3   
+PIN_ENCODER     = 1    
+PIN_BRUSH_SERVO = 12   
+PIN_CENTRAL_MTR = 14   
+PIN_CHUCK_MTR   = 15  
 
 # lcd pinout
-LCD_RS = 26
-LCD_E  = 19
-LCD_D4 = 6
-LCD_D5 = 5
-LCD_D6 = 22
-LCD_D7 = 23
+LCD_RS = 19
+LCD_E  = 21
+LCD_D4 = 26
+LCD_D5 = 27
+LCD_D6 = 7
+LCD_D7 = 8
 
 # section 2: hardware objects
 
@@ -102,8 +102,9 @@ def system_stop_all():
 def check_dirt_with_ai():
     # takes photo and asks roboflow if dirty
     lcd.show("Scanning...", "Analyzing Disc")
-    
-    cap = cv2.VideoCapture("tcp://127.0.0.1:8888")
+     
+    cap = cv2.VideoCapture("tcp://127.0.0.1:8888") 
+    # if you dont want to use a second terminal use cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
     
     # flush buffer
