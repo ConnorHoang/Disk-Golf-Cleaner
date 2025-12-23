@@ -1,8 +1,8 @@
-# Disc Golf Cleaner Robot
+# Disc Golf Cleaner
 
 This repository contains the code and documentation for the Disc Golf Cleaner project, an automated robotic system designed to clean disc golf discs using AI-powered dirt detection.
 
-View the project website at: [https://olincollege.github.io/pie-2025-03/disc-golf/](https://olincollege.github.io/pie-2025-03/disc-golf/)
+View the project website at: [https://disc-golf-project.vercel.app/#/design](https://disc-golf-project.vercel.app/#/design)
 
 ## Software & Control Logic
 
